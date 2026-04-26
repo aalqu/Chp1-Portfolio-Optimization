@@ -14,7 +14,7 @@
   ],
   "make_plots": false,
   "data": {
-    "data_root": "us",
+    "data_root": "real world data",
     "min_history": 756
   },
   "problem": {
@@ -77,4 +77,3 @@
     }
   ]
 }
-

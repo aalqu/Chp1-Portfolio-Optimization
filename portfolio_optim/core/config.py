@@ -51,7 +51,7 @@ DEFAULT_TICKER_GROUPS = {
 
 @dataclass
 class DataConfig:
-    data_root: Path = Path("us")
+    data_root: Path = Path("real world data")
     ticker_groups: dict[int, list[str]] = field(default_factory=lambda: DEFAULT_TICKER_GROUPS.copy())
     min_history: int = 756
     train_fraction: float = 0.7

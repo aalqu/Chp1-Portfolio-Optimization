@@ -19,7 +19,7 @@
   ],
   "make_plots": true,
   "data": {
-    "data_root": "us",
+    "data_root": "real world data",
     "min_history": 756,
     "ticker_groups": {
       "20": [
