@@ -1,0 +1,80 @@
+{
+  "experiment_name": "revised_goalreach_pilot",
+  "results_dir": "revised_goalreach_experiment/outputs/pilot_run",
+  "methods": [
+    "baseline_cash",
+    "baseline_equal_weight",
+    "baseline_mean_variance",
+    "fd_hjb_viscosity",
+    "nn_mlp_shared"
+  ],
+  "evaluation_sets": [
+    "validation",
+    "test"
+  ],
+  "make_plots": false,
+  "data": {
+    "data_root": "us",
+    "min_history": 756
+  },
+  "problem": {
+    "horizon_steps": 12,
+    "risk_free_rate": 0.01,
+    "initial_wealths": [
+      0.8,
+      0.9
+    ],
+    "target_wealth": 1.0,
+    "asset_counts": [
+      1,
+      5
+    ],
+    "rebalance_frequency": "monthly",
+    "n_eval_paths": 2000,
+    "seed_list": [
+      1
+    ]
+  },
+  "constraints": {
+    "long_only": true,
+    "min_weight": 0.0,
+    "max_weight": 1.0,
+    "leverage_limit": 1.0,
+    "allow_cash": true
+  },
+  "fd": {
+    "wealth_min": 0.3,
+    "wealth_max": 2.0,
+    "n_wealth_points": 100,
+    "n_control_samples": 128
+  },
+  "nn": {
+    "hidden_dim": 32,
+    "depth": 2,
+    "dropout": 0.0,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "epochs": 5,
+    "train_paths": 1024,
+    "validation_paths": 256,
+    "device": "auto",
+    "history_window": 6,
+    "fourier_modes": 3,
+    "path_sampler": "bootstrap",
+    "goal_loss_weight": 2.0,
+    "shortfall_loss_weight": 0.1,
+    "weight_regularization_weight": 0.001
+  },
+  "folds": [
+    {
+      "name": "fold_2018_2021",
+      "train_start": "2005-03-01",
+      "train_end": "2017-12-31",
+      "validation_start": "2018-01-01",
+      "validation_end": "2019-12-31",
+      "test_start": "2020-01-01",
+      "test_end": "2021-12-31"
+    }
+  ]
+}
+
