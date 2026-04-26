@@ -1,0 +1,22 @@
+{
+  "config_hash": "c2487e7f97c8e8d5",
+  "config_path": "/workspace/Chp1-Portfolio-Optimization/revised_goalreach_experiment/configs/confirmatory.json",
+  "created_unix_time": 1777197229.3765397,
+  "experiment_name": "revised_goalreach_confirmatory",
+  "git_revision": "6c6a57b",
+  "platform": "Linux-6.8.0-57-generic-x86_64-with-glibc2.35",
+  "project_root": "/workspace/Chp1-Portfolio-Optimization",
+  "python": "3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]",
+  "selected_methods": [
+    "baseline_cash",
+    "baseline_equal_weight",
+    "baseline_mean_variance",
+    "fd_hjb_viscosity",
+    "nn_mlp_shared",
+    "nn_mlp_deep",
+    "nn_bsde",
+    "nn_pinn",
+    "nn_recurrent",
+    "nn_transformer"
+  ]
+}
